@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" agent="Codex">
+  <diagram id="todo-db-schema" name="ToDoList DB schema">
+    <mxGraphModel dx="1414" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1F2937;" value="Блок-схема базы данных проекта ToDoList" vertex="1">
+          <mxGeometry height="50" width="840" x="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="database" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fillColor=#E0F2FE;strokeColor=#0284C7;fontColor=#0F172A;fontSize=18;fontStyle=1;spacing=12;" value="TaskDatabase&lt;br&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;RoomDatabase singleton&lt;br&gt;Файл: tasks.db&lt;br&gt;Метод: taskDao()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="300" x="80" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="dao" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;strokeWidth=2;fillColor=#ECFDF5;strokeColor=#059669;fontColor=#0F172A;fontSize=18;fontStyle=1;spacing=12;" value="TaskDao&lt;br&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;observeTasks()&lt;br&gt;insert(task)&lt;br&gt;update(task)&lt;br&gt;delete(task)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="190" width="300" x="80" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="table" parent="1" style="shape=table;startSize=42;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;whiteSpace=wrap;fillColor=#FEF3C7;strokeColor=#D97706;fontColor=#111827;fontSize=18;" value="Таблица: tasks" vertex="1">
+          <mxGeometry height="430" width="520" x="540" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="row-header-left" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FDE68A;strokeColor=#D97706;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;fontSize=14;left=0;top=0;bottom=0;right=0;" value="Поле" vertex="1">
+          <mxGeometry height="44" width="180" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="row-header-right" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FDE68A;strokeColor=#D97706;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;fontSize=14;left=0;top=0;bottom=0;right=0;" value="Тип и назначение" vertex="1">
+          <mxGeometry height="44" width="340" x="180" y="42" as="geometry" />
+        </mxCell>
+        <mxCell id="field-id" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;fontStyle=1;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="id" vertex="1">
+          <mxGeometry height="48" width="180" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="field-id-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="INTEGER, PRIMARY KEY, AUTOINCREMENT, NOT NULL" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="field-title" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="title" vertex="1">
+          <mxGeometry height="48" width="180" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="field-title-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="TEXT, nullable — название задачи" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="field-description" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="description" vertex="1">
+          <mxGeometry height="48" width="180" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="field-description-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="TEXT, nullable — описание задачи" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="field-priority" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="priority" vertex="1">
+          <mxGeometry height="48" width="180" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="field-priority-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="INTEGER, NOT NULL — 0 high, 1 medium, 2 low" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="field-reminder" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="reminderAtMillis" vertex="1">
+          <mxGeometry height="48" width="180" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="field-reminder-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="INTEGER, NOT NULL — время напоминания Unix ms" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="field-completed" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="completed" vertex="1">
+          <mxGeometry height="48" width="180" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="field-completed-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#F9FAFB;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="INTEGER, NOT NULL — boolean 0/1" vertex="1">
+          <mxGeometry height="48" width="340" x="180" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="field-created" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="createdAtMillis" vertex="1">
+          <mxGeometry height="56" width="180" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="field-created-type" parent="table" style="shape=partialRectangle;connectable=0;fillColor=#FFFFFF;strokeColor=#D1D5DB;overflow=hidden;html=1;whiteSpace=wrap;fontSize=13;left=0;top=0;bottom=0;right=0;" value="INTEGER, NOT NULL — дата создания Unix ms" vertex="1">
+          <mxGeometry height="56" width="340" x="180" y="374" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-db-table" edge="1" parent="1" source="database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#0284C7;fontColor=#0369A1;endArrow=block;endFill=1;" target="table" value="entities = { Task.class }">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-db-dao" edge="1" parent="1" source="database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#059669;fontColor=#047857;endArrow=block;endFill=1;" target="dao" value="предоставляет DAO">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-dao-table" edge="1" parent="1" source="dao" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#059669;fontColor=#047857;endArrow=block;endFill=1;" target="table" value="CRUD + observe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
